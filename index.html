@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+    <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+<!-- jQuery library -->
+
+</head>
+<body style="overflow:hidden; margin:0">
+<div class ="container">
+ <div class="row">
+    <div class="col-sm ">
+        <br>
+        <div class="thirteen">
+            <h1>Expense Tracker</h1>
+          </div>
+    <img src="https://www.litrg.org.uk/sites/default/files/styles/img_basic_page/public/expenses%20receipts%20vector%20shutterstock_495947983.jpg?itok=yZXDRorl" class="container-fluid p-0"   />
+    <h2 align="center" id="amt" style="color:white">
+        <br>
+        Total Amount: <p id="budget"> </p>
+    </h2>
+    </div>
+    <div class="col-lg ">
+        
+            <div id="form-box">
+                <form>
+                  <div id='small'>
+                    <span>Type</span> 
+                      <select name="type">
+                          <option value="Expenses">Expenses</option>
+                          <option value="Savings">Savings</option>
+                      </select>
+                  </div>
+                  
+                  <div  id='small'>
+                    <span>Name</span> <input type="text" name="item-name" placeholder="What did you spend on?">
+                  </div>
+                  
+                  <div  id='small'>
+                    <span>Date</span> <input type="date" name="date">
+                  </div>
+                  
+                  <div  id='small'>
+                    <span>Amount</span> <input type="number" name="amount" placeholder="How much?">
+                  </div>
+                  
+                </form>
+                </div>
+                <div class="button-container">
+                <div id="button" class='button -flower center'>Add a new entry</div>
+            </div>
+            <br>
+            <div class="seven">
+                <h1>Expense Table</h1>
+              </div>
+              <table>
+                <tr>
+                  <th id="type" class="center">Type</th>
+                  <th>Name</th>
+                  <th id="date">Date</th>
+                  <th style="text-align: right" id="amount">Amount</th>
+                </tr>
+                <tr id="if-empty">
+                  <td colspan="4">Your added items will show up here!</td>
+                </tr>
+              
+              </table>
+    
+    </div>
+    </div>
+</div>
+</body>
+</html>
