@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script  type="text/javascript" src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -22,7 +23,9 @@
     <img src="https://www.litrg.org.uk/sites/default/files/styles/img_basic_page/public/expenses%20receipts%20vector%20shutterstock_495947983.jpg?itok=yZXDRorl" class="container-fluid p-0"   />
     <h2 align="center" id="amt" style="color:white">
         <br>
-        Total Amount: <p id="budget"> </p>
+        Total Amount <p id="budget"> </p>
+        <p id = "E" style="color:white" align="center"> </p>
+        <p id = "S" style="color:white" align="center"> </p>
     </h2>
     </div>
     <div class="col-lg ">
@@ -31,44 +34,47 @@
                 <form>
                   <div id='small'>
                     <span>Type</span> 
-                      <select name="type">
-                          <option value="Expenses">Expenses</option>
-                          <option value="Savings">Savings</option>
+                      <select id="type">
+                          <option value='Expenses' >Expenses</option>
+                          <option value='Savings' >Savings</option>
                       </select>
                   </div>
                   
                   <div  id='small'>
-                    <span>Name</span> <input type="text" name="item-name" placeholder="What did you spend on?">
+                    <span>Item </span> <input type="text" id="item" placeholder="What did you spend on?">
                   </div>
                   
                   <div  id='small'>
-                    <span>Date</span> <input type="date" name="date">
+                    <span>Date</span> <input type="date" id="date">
                   </div>
                   
                   <div  id='small'>
-                    <span>Amount</span> <input type="number" name="amount" placeholder="How much?">
+                    <span>Amount</span> <input type="number" id="amount" placeholder="How much?">
                   </div>
+                  
                   
                 </form>
                 </div>
                 <div class="button-container">
-                <div id="button" class='button -flower center'>Add a new entry</div>
+                <div id="button" class='button -flower center' onclick = 'AddRow()'>Add a new entry</div>
             </div>
             <br>
             <div class="seven">
                 <h1>Expense Table</h1>
               </div>
-              <table>
+              <table id="list">
+                <tbody>
                 <tr>
                   <th id="type" class="center">Type</th>
-                  <th>Name</th>
+                  <th>Item</th>
                   <th id="date">Date</th>
-                  <th style="text-align: right" id="amount">Amount</th>
+                  <th  id="amount">Amount</th>
+                  <th style="text-align: center" id="actions">Actions</th>
                 </tr>
                 <tr id="if-empty">
-                  <td colspan="4">Your added items will show up here!</td>
+                  <td colspan="5">Your added items will show up here!</td>
                 </tr>
-              
+              </tbody>
               </table>
     
     </div>

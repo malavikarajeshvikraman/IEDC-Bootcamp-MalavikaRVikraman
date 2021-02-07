@@ -209,18 +209,47 @@ input :active{
           }
   th{
     padding: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+  
   }
-  tr:nth-child(odd)
-  {
-    background-color: gray;
-  }
+
   td{
-    padding: 10px 15px ;
-    color: gray;
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  
   }
   .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
 
+}
+
+.delete, .save, .edit {
+  width: 20%;
+  margin: 3.65%;
+  padding: 2%;
+  color: white;
+  background-color: black;
+}
+
+tr {
+  color:white;
+ height:fit-content;
+}
+.entry{
+  width: 60%;
+  align-content: center;
+  margin: 2%;
+  margin-left: 12%;
+}
+#actions{
+
+  width: 26%;
+}
+.save {
+  display: none;
 }
